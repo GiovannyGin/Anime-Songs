@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Anime Songs</string>
+    <string name="title_activity_music_list">Anime music</string>
 </resources>
