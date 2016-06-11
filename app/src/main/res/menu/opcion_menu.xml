@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:checked="true"
+            android:id="@+id/opcion_navegacion_album"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Inicio"/>
+        <item android:checked="true"
+            android:id="@+id/opcion_navegacion_milista"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Listas"/>
+        <item android:checked="true"
+            android:id="@+id/opcion_navegacion_top"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Top"/>
+
+    </group>
+</menu>
