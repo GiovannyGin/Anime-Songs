@@ -1,7 +1,7 @@
 package com.commonapps.animesongs;
 
 
-import android.content.Intent;
+import android.app.Fragment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -11,15 +11,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TextView;
-import android.widget.Toast;
+
+
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
-    TextView textView;
     Toolbar toolbar;
     ActionBar actionBar;
-
+    Fragment fragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.fragment_album, new FragmentAlbum()).commit();
+        fragmentManager.beginTransaction().replace(R.id.fragment_album, new album()).commit();
 
     }
 
@@ -66,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.opcion_navegacion_album:
                                 menuItem.setChecked(true);
                                 drawerLayout.closeDrawer(GravityCompat.START);
+
                                 return true;
                             case R.id.opcion_navegacion_milista:
                                 menuItem.setChecked(true);
