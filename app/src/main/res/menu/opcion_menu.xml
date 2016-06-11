@@ -4,15 +4,15 @@
     <group android:checkableBehavior="single">
         <item android:checked="true"
             android:id="@+id/opcion_navegacion_album"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_play_circle_filled_black_24dp"
             android:title="Inicio"/>
         <item android:checked="true"
             android:id="@+id/opcion_navegacion_milista"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_list_black_24dp"
             android:title="Listas"/>
         <item android:checked="true"
             android:id="@+id/opcion_navegacion_top"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/ic_star_black_24dp"
             android:title="Top"/>
 
     </group>
