@@ -29,7 +29,7 @@ public class datosAdapter extends  RecyclerView.Adapter<datosAdapter.AlbumViewHo
     @Override
     public void onBindViewHolder(AlbumViewHolder holder, int position) {
         holder.Titulo.setText(mdata.get(position).getTitulo());
-        holder.Descripcion.setText(mdata.get(position).getDescripcion());
+        //holder.Descripcion.setText(mdata.get(position).getDescripcion());
     }
 
     @Override
@@ -58,7 +58,7 @@ public class datosAdapter extends  RecyclerView.Adapter<datosAdapter.AlbumViewHo
             super(itemView);
             cardView = (CardView)itemView.findViewById(R.id.album);
             Titulo = (TextView)itemView.findViewById(R.id.nombre);
-            Descripcion = (TextView)itemView.findViewById(R.id.Descripcion);
+            //Descripcion = (TextView)itemView.findViewById(R.id.Descripcion);
             itemView.setOnClickListener(this);
 
         }

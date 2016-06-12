@@ -1,9 +1,10 @@
 package com.commonapps.animesongs;
 
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 
 public class album extends Fragment implements datosAdapter.OnItemClickListener {
 private RecyclerView recyclerView;
-private LinearLayoutManager layoutManager;
+private GridLayoutManager layoutManager;
 private datosAdapter adapter;
 
 public album(){}
@@ -34,8 +35,16 @@ public album(){}
 
         recyclerView = (RecyclerView)v.findViewById(R.id.lista_album);
         recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this.getContext());
-        recyclerView.setLayoutManager(layoutManager);
+        if(getActivity().getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+            recyclerView.setLayoutManager(new GridLayoutManager(this.getContext(), 2));
+        }
+        else{
+            recyclerView.setLayoutManager(new GridLayoutManager(this.getContext(), 4));
+        }
+        //layoutManager = new GridLayoutManager(this.getContext(),2);
+        //recyclerView.setLayoutManager(layoutManager);
+
+
 
          ArrayList<datos_album> datos = new ArrayList<>();
         datos.add(new datos_album("Titulo","Descripcion"));
