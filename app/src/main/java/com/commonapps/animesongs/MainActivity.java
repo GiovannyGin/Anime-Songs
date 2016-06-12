@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             setupNavigationDrawerContent(navigationView);
         }
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.fragment_album, new album()).commit();
 
 
     }

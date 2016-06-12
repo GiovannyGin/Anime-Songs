@@ -4,6 +4,7 @@ package com.commonapps.animesongs;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -84,5 +85,9 @@ public album(){}
     @Override
     public void onClick(datosAdapter.AlbumViewHolder holder, String idPromocion) {
         Toast.makeText(this.getContext(),idPromocion,Toast.LENGTH_SHORT).show();
+
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.fragment_album, new MusicList()).commit();
+
     }
 }
