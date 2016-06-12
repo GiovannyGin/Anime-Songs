@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
             setupNavigationDrawerContent(navigationView);
         }
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.fragment_album, new album()).commit();
+
 
     }
 
@@ -76,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
                                 return true;
                             case R.id.opcion_navegacion_milista:
                                 menuItem.setChecked(true);
+                                FragmentManager fragmentManager = getSupportFragmentManager();
+                                fragmentManager.beginTransaction().replace(R.id.fragment_album, new MusicList()).commit();
                                 drawerLayout.closeDrawer(GravityCompat.START);
                                 return true;
                             case R.id.opcion_navegacion_top:
