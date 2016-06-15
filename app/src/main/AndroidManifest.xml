@@ -16,9 +16,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MusicList"
-            android:label="@string/title_activity_music_list"
-            android:theme="@style/AppTheme"></activity>
+            android:name=".com.commonapps.animesong.musicview.MusicActivity"
+            android:label="@string/title_activity_music"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".com.commonapps.animesong.mylist.MyMusicList"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
+
 
 </manifest>

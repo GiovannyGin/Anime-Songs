@@ -1,4 +1,5 @@
-<android.support.v7.widget.RecyclerView android:id="@+id/lista_album"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.RecyclerView android:id="@+id/lista_canciones"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:layout_width="match_parent"
     android:layout_height="match_parent"

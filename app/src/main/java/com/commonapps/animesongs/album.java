@@ -1,6 +1,8 @@
 package com.commonapps.animesongs;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,8 +22,14 @@ public class album extends Fragment implements datosAdapter.OnItemClickListener 
 private RecyclerView recyclerView;
 private GridLayoutManager layoutManager;
 private datosAdapter adapter;
+    private Intent mActions;
 
 public album(){}
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -84,10 +92,14 @@ public album(){}
 
     @Override
     public void onClick(datosAdapter.AlbumViewHolder holder, String idPromocion) {
-        Toast.makeText(this.getContext(),idPromocion,Toast.LENGTH_SHORT).show();
 
         FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.fragment_album, new MusicList()).commit();
+       // fragmentManager.beginTransaction().replace(R.id.contenedor_fragments, new Class<MusicAt>()).commit();
 
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 }
