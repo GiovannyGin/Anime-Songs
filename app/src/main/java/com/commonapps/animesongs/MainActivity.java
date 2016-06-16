@@ -17,7 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.commonapps.animesongs.com.commonapps.animesong.mylist.MyMusicList;
-
+import com.commonapps.animesongs.com.commonapps.animesong.album;
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
@@ -107,8 +107,10 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction;
         switch (position) {
             case 0:
-                FragmentManager fragmentCards = getSupportFragmentManager();
-                fragmentCards.beginTransaction().replace(R.id.contenedor_fragments, new album()).commit();
+                //FragmentManager fragmentCards = getSupportFragmentManager();
+                //fragmentCards.beginTransaction().replace(R.id.contenedor_fragments, new album()).commit();
+                Intent intent1 = new Intent(this, album.class);
+                startActivity(intent1);
                 break;
 
             case 1:
